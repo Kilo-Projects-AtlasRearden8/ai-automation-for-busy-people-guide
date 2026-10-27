@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bill Reminders — AI Automation for Busy People</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Bill Reminders</h1>
+    <p>Never miss a due date. Published by Asdale Dynamics, LLC &middot; MIT License</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="safety.html">Safety First</a></li>
+    <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+    <li><a href="renaming-files.html">Renaming Files</a></li>
+    <li><a href="bill-reminders.html" class="active">Bill Reminders</a></li>
+    <li><a href="saving-webpages.html">Saving Webpages</a></li>
+  </ul>
+</nav>
+
+<main>
+  <aside class="sidebar">
+    <h2>Guide</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="safety.html">Safety First</a></li>
+      <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+      <li><a href="renaming-files.html">Renaming Files</a></li>
+      <li><a href="bill-reminders.html" class="active">Bill Reminders</a></li>
+      <li><a href="saving-webpages.html">Saving Webpages</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Bill Reminders</h1>
+    <p>Never miss a due date. This automation reads a simple list of bills and tells you which ones are coming up soon &mdash; perfect for low-energy days when paperwork feels overwhelming.</p>
+
+    <h2>What it does</h2>
+    <p>Reads <code>bills.json</code> and prints reminders for bills due within the next 7 days (you can change the window). It shows bill name, due date, amount, days left, and a "PAID" or "DUE SOON" flag.</p>
+
+    <h2>bills.json example</h2>
+    <pre>[{
+  "name": "Electricity",
+  "due_date": "2026-11-05",
+  "amount": 87.50,
+  "paid": false
+}, {
+  "name": "Internet",
+  "due_date": "2026-11-10",
+  "amount": 65.00,
+  "paid": true
+}]</pre>
+    <p><code>name</code> &mdash; what the bill is &middot; <code>due_date</code> &mdash; YYYY-MM-DD format &middot; <code>amount</code> &mdash; how much (optional) &middot; <code>paid</code> &mdash; true/false (optional, defaults to false)</p>
+
+    <div class="info-box">
+      <p>This example file contains <strong>no real personal data</strong>. It is an example only &mdash; replace it with your own bills.</p>
+    </div>
+
+    <h2>How to run</h2>
+    <ol>
+      <li><p>Copy <code>scripts/bill_reminders.py</code> and <code>scripts/bills.json.example</code> to your computer.</p></li>
+      <li><p>Rename the example to <code>bills.json</code> and edit it with your own bills.</p></li>
+      <li><p>Run:</p>
+        <pre>python3 scripts/bill_reminders.py --bills bills.json</pre>
+        <p>Bills due soon show at the top. Paid bills are marked PAID.</p></li>
+    </ol>
+
+    <h2>Options</h2>
+    <ul>
+      <li><code>--days</code> &mdash; how far ahead to look (default: 7)</li>
+      <li><code>--upcoming</code> &mdash; show only unpaid bills due soon</li>
+    </ul>
+
+    <h2>No-code alternative</h2>
+    <p>Use your phone's calendar or a free app like Google Calendar. Set a reminder 2 days before each bill is due. Paper works too: write due dates on a wall calendar.</p>
+
+    <p><em>Asdale Dynamics, LLC &mdash; tested, local-first, no secrets. Education only; this is not financial advice.</em></p>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 Asdale Dynamics, LLC. MIT License.</p>
+</footer>
+
+</body>
+</html>

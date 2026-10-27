@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Example Electricity",
+    "due_date": "2026-11-05",
+    "amount": 87.50,
+    "paid": false
+  },
+  {
+    "name": "Example Internet",
+    "due_date": "2026-11-12",
+    "amount": 65.00,
+    "paid": false
+  },
+  {
+    "name": "Example Phone (already paid)",
+    "due_date": "2026-11-01",
+    "amount": 40.00,
+    "paid": true
+  }
+]

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renaming Files — AI Automation for Busy People</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Renaming Files</h1>
+    <p>Give batches of files clean, consistent names. Published by Asdale Dynamics, LLC &middot; MIT License</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="safety.html">Safety First</a></li>
+    <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+    <li><a href="renaming-files.html" class="active">Renaming Files</a></li>
+    <li><a href="bill-reminders.html">Bill Reminders</a></li>
+    <li><a href="saving-webpages.html">Saving Webpages</a></li>
+  </ul>
+</nav>
+
+<main>
+  <aside class="sidebar">
+    <h2>Guide</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="safety.html">Safety First</a></li>
+      <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+      <li><a href="renaming-files.html" class="active">Renaming Files</a></li>
+      <li><a href="bill-reminders.html">Bill Reminders</a></li>
+      <li><a href="saving-webpages.html">Saving Webpages</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Renaming Files</h1>
+    <p>Files named <code>IMG_4829.jpg</code>, <code>document (1).pdf</code>, or <code>final_v2_REALLYFINAL.docx</code> are hard to find later. This automation renames batches of files into clean, consistent names &mdash; on copies, never your originals.</p>
+
+    <h2>What it does</h2>
+    <p>Renames every matching file using a template you choose, then copies the renamed files into an output folder. Default template:</p>
+    <pre>{name}_{date}_{counter}.{ext}</pre>
+    <p>Example: <code>vacation_2026-10-27_01.jpg</code></p>
+
+    <h2>How to run</h2>
+    <ol>
+      <li><p>Copy <code>scripts/rename_files.py</code> to your computer.</p></li>
+      <li><p>Dry-run mode (safe, nothing changes):</p>
+        <pre>python3 scripts/rename_files.py --source ./my-photos --pattern "*.jpg"</pre>
+        <p>It prints the old name and the new name side by side.</p></li>
+      <li><p>Apply (copies renamed files to <code>./renamed-output</code>):</p>
+        <pre>python3 scripts/rename_files.py --source ./my-photos --pattern "*.jpg" --apply</pre>
+        <p>Originals are untouched.</p></li>
+    </ol>
+
+    <h2>Options</h2>
+    <ul>
+      <li><code>--template</code> &mdash; choose your own name pattern (use <code>{name}</code>, <code>{date}</code>, <code>{counter}</code>, <code>{ext}</code>)</li>
+      <li><code>--pattern</code> &mdash; only rename files matching this glob (default: <code>*</code>)</li>
+      <li><code>--dest</code> &mdash; where renamed copies go (default: <code>renamed-output</code>)</li>
+    </ul>
+
+    <div class="info-box">
+      <p><strong>Test it first:</strong> make a test folder with 3&ndash;5 dummy files, run dry-run, confirm the names look right, then apply.</p>
+    </div>
+
+    <p><em>Asdale Dynamics, LLC &mdash; tested, local-first, no secrets.</em></p>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 Asdale Dynamics, LLC. MIT License.</p>
+</footer>
+
+</body>
+</html>

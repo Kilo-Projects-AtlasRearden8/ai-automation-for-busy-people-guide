@@ -1,0 +1,13 @@
+# Python / bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local test output
+sorted-downloads/
+renamed-output/
+saved-pages/

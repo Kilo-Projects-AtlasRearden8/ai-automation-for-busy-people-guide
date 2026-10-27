@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safety First — AI Automation for Busy People</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Safety First</h1>
+    <p>Read this before you run any script. Published by Asdale Dynamics, LLC &middot; MIT License</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="safety.html" class="active">Safety First</a></li>
+    <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+    <li><a href="renaming-files.html">Renaming Files</a></li>
+    <li><a href="bill-reminders.html">Bill Reminders</a></li>
+    <li><a href="saving-webpages.html">Saving Webpages</a></li>
+  </ul>
+</nav>
+
+<main>
+  <aside class="sidebar">
+    <h2>Guide</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="safety.html" class="active">Safety First</a></li>
+      <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+      <li><a href="renaming-files.html">Renaming Files</a></li>
+      <li><a href="bill-reminders.html">Bill Reminders</a></li>
+      <li><a href="saving-webpages.html">Saving Webpages</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Safety First</h1>
+    <p>Read this page before you run any script in this guide.</p>
+
+    <h2>The golden rules</h2>
+    <ol>
+      <li><strong>Test on copies.</strong> Every script here works on copies of your files, never your originals &mdash; unless you explicitly tell it to.</li>
+      <li><strong>Never move originals.</strong> Scripts copy, they do not move or delete.</li>
+      <li><strong>Dry-run first.</strong> Every script has a "dry-run" mode (the default) that prints what it <em>would</em> do without changing a single file.</li>
+      <li><strong>Back up before you apply.</strong> Once you're comfortable, make a backup of the folder you're working in, then run with <code>--apply</code>.</li>
+    </ol>
+
+    <div class="info-box">
+      <p><strong>Why this matters:</strong> Automation saves time, but a mistake can rename or scatter a lot of files at once. Working on copies means you can experiment without risk. If something looks wrong, delete the copy and try again.</p>
+    </div>
+
+    <h2>Dry-run vs apply</h2>
+    <table>
+      <thead><tr><th>Mode</th><th>What it does</th><th>Safe?</th></tr></thead>
+      <tbody>
+        <tr><td><code>python3 script.py</code> (default)</td><td>Prints a plan</td><td>Yes &mdash; nothing changes</td></tr>
+        <tr><td><code>python3 script.py --apply</code></td><td>Copies files to a new folder</td><td>Safe &mdash; originals untouched</td></tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box">
+      <p><strong>Your responsibility:</strong> you are in charge. Review the plan before you apply. If you're not sure, ask a friend or run it on a test folder first.</p>
+    </div>
+
+    <p><em>Asdale Dynamics, LLC &mdash; beginner-friendly AI education, tested and local-first.</em></p>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 Asdale Dynamics, LLC. MIT License.</p>
+</footer>
+
+</body>
+</html>

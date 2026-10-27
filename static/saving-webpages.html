@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saving Webpages — AI Automation for Busy People</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Saving Webpages</h1>
+    <p>Save pages to read offline. Published by Asdale Dynamics, LLC &middot; MIT License</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="safety.html">Safety First</a></li>
+    <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+    <li><a href="renaming-files.html">Renaming Files</a></li>
+    <li><a href="bill-reminders.html">Bill Reminders</a></li>
+    <li><a href="saving-webpages.html" class="active">Saving Webpages</a></li>
+  </ul>
+</nav>
+
+<main>
+  <aside class="sidebar">
+    <h2>Guide</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="safety.html">Safety First</a></li>
+      <li><a href="sorting-downloads.html">Sorting Downloads</a></li>
+      <li><a href="renaming-files.html">Renaming Files</a></li>
+      <li><a href="bill-reminders.html">Bill Reminders</a></li>
+      <li><a href="saving-webpages.html" class="active">Saving Webpages</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Saving Webpages</h1>
+    <p>Found an article, recipe, or guide you want to read later? This automation saves a webpage as a single HTML file you can open offline &mdash; no account, no subscription, no clipping service required.</p>
+
+    <h2>What it does</h2>
+    <p>Downloads a webpage and saves it to a <code>saved-pages/</code> folder with a timestamped filename, so you can read it anytime without an internet connection.</p>
+
+    <h2>How to run</h2>
+    <ol>
+      <li><p>Copy <code>scripts/save_webpage.py</code> to your computer.</p></li>
+      <li><p>Run:</p>
+        <pre>python3 scripts/save_webpage.py "https://example.com/article"</pre>
+        <p>It prints where the page was saved.</p></li>
+      <li><p>Open the saved <code>.html</code> file in your browser.</p></li>
+    </ol>
+
+    <h2>Options</h2>
+    <ul>
+      <li><code>--dest</code> &mdash; where to save pages (default: <code>saved-pages</code>)</li>
+      <li><code>--name</code> &mdash; choose your own filename (default: timestamp + page title)</li>
+    </ul>
+
+    <h2>No-code alternative</h2>
+    <p>Every browser can do this natively:</p>
+    <ul>
+      <li><strong>Chrome / Edge:</strong> File &gt; Save as &gt; "Webpage, HTML only"</li>
+      <li><strong>Firefox:</strong> File &gt; Save Page As</li>
+      <li><strong>Safari:</strong> File &gt; Save As &gt; "Web Archive" or "Page Source"</li>
+    </ul>
+    <p>Keyboard shortcut: <code>Ctrl+S</code> (Windows/Linux) or <code>Cmd+S</code> (Mac).</p>
+
+    <div class="warn-box">
+      <p><strong>Privacy tip:</strong> only save pages you're allowed to keep for personal use. Don't save pages that contain other people's personal data.</p>
+    </div>
+
+    <p><em>Asdale Dynamics, LLC &mdash; tested, local-first, no secrets.</em></p>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 Asdale Dynamics, LLC. MIT License.</p>
+</footer>
+
+</body>
+</html>

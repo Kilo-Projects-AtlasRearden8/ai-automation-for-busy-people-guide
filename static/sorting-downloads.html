@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sorting Downloads — AI Automation for Busy People</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="inner">
+    <h1>Sorting Downloads</h1>
+    <p>Tidy your Downloads folder by file type. Published by Asdale Dynamics, LLC &middot; MIT License</p>
+  </div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="safety.html">Safety First</a></li>
+    <li><a href="sorting-downloads.html" class="active">Sorting Downloads</a></li>
+    <li><a href="renaming-files.html">Renaming Files</a></li>
+    <li><a href="bill-reminders.html">Bill Reminders</a></li>
+    <li><a href="saving-webpages.html">Saving Webpages</a></li>
+  </ul>
+</nav>
+
+<main>
+  <aside class="sidebar">
+    <h2>Guide</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="safety.html">Safety First</a></li>
+      <li><a href="sorting-downloads.html" class="active">Sorting Downloads</a></li>
+      <li><a href="renaming-files.html">Renaming Files</a></li>
+      <li><a href="bill-reminders.html">Bill Reminders</a></li>
+      <li><a href="saving-webpages.html">Saving Webpages</a></li>
+    </ul>
+  </aside>
+
+  <article class="content">
+    <h1>Sorting Downloads</h1>
+    <p>Your Downloads folder probably mixes images, PDFs, installers, and videos into one big pile. This automation sorts files into neat folders by type &mdash; without touching your originals.</p>
+
+    <h2>What it does</h2>
+    <p>Looks at every file in a folder (default: your Downloads folder), figures out what kind of file it is by its extension, and copies it into a matching folder:</p>
+
+    <table>
+      <thead><tr><th>Files</th><th>Goes to</th></tr></thead>
+      <tbody>
+        <tr><td>.jpg .png .gif .webp .svg</td><td>Images/</td></tr>
+        <tr><td>.pdf .doc .docx .txt .rtf</td><td>Documents/</td></tr>
+        <tr><td>.mp3 .wav .aac .m4a</td><td>Audio/</td></tr>
+        <tr><td>.mp4 .mov .avi .mkv .wmv</td><td>Video/</td></tr>
+        <tr><td>.zip .rar .7z .tar .gz</td><td>Archives/</td></tr>
+        <tr><td>.exe .msi .dmg .pkg</td><td>Installers/</td></tr>
+        <tr><td>everything else</td><td>Other/</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How to run</h2>
+    <ol>
+      <li><p>Copy <code>scripts/sort_downloads.py</code> to your computer.</p></li>
+      <li><p>Try it in dry-run mode (safe, nothing changes):</p>
+        <pre>python3 scripts/sort_downloads.py</pre>
+        <p>It prints what it <em>would</em> copy where.</p></li>
+      <li><p>Run it for real (copies files into a new <code>Sorted Downloads</code> folder):</p>
+        <pre>python3 scripts/sort_downloads.py --apply</pre>
+        <p>Your originals stay exactly where they are.</p></li>
+    </ol>
+
+    <h2>Choose your own folders</h2>
+    <pre>python3 scripts/sort_downloads.py --source ~/Downloads --dest ~/Desktop/MySorted</pre>
+
+    <div class="info-box">
+      <p><strong>Test it first (recommended):</strong> make a test folder with a few dummy files, point the script at it, and confirm the copies land in the right place before you point it at your real Downloads folder.</p>
+    </div>
+
+    <h2>No-code alternative</h2>
+    <p>On Windows, try PowerToys or File Explorer's "Sort by" &gt; "Type." On Mac, use Finder's "Use Groups" and "Sort by" &gt; "Kind." These are built-in and require no scripts at all.</p>
+
+    <p><em>Asdale Dynamics, LLC &mdash; tested, local-first, no secrets.</em></p>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2026 Asdale Dynamics, LLC. MIT License.</p>
+</footer>
+
+</body>
+</html>
